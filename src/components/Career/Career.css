@@ -1,0 +1,38 @@
+.career-hero {
+  padding: 5rem 0;
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo {
+  background: white;
+  border-radius: 8px;
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: translateY(-5px);
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--bs-primary);
+  background-color: rgba(var(--bs-primary-rgb), 0.1);
+}
+
+@media (max-width: 767.98px) {
+  .career-hero {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  .career-hero img {
+    margin-top: 2rem;
+  }
+}
