@@ -7,19 +7,19 @@ const Career = () => {
   const jobOpenings = [
     {
       id: 1,
-      title: "Junior Web Developer",
-      company: "TechSolutions Inc.",
-      location: "Remote",
-      type: "Full-time",
+      title: "Instrumentation Engineer",
+      company: "RLT Instrumentation Pvt, Ltd.",
+      location: "Chengalpattu, TN",
+      type: "Internship",
       description: "Entry-level position for graduates of our Web Development program. HTML, CSS, JavaScript and React skills required.",
       postedDate: "2 days ago"
     },
     {
       id: 2,
-      title: "Data Analyst Trainee",
+      title: "Agriculture Officer",
       company: "DataInsights Corp",
       location: "New York, NY",
-      type: "Full-time",
+      type: "Internship",
       description: "Ideal for graduates of our Data Science program. Python and SQL skills required.",
       postedDate: "1 week ago"
     },
@@ -75,7 +75,7 @@ const Career = () => {
             </Col>
             <Col lg={6}>
               <img 
-                src="https://placehold.co/600x400" 
+                src="./assets/Career.png" 
                 alt="Diverse group of professionals celebrating job offers by holding up signed contracts"
                 className="img-fluid rounded shadow-lg" 
               />
@@ -162,7 +162,7 @@ const Career = () => {
       </section>
 
       {/* Hiring Partners */}
-      <section className="py-5">
+      {/* <section className="py-5">
         <Container>
           <h2 className="text-center mb-5">Our Hiring Partners</h2>
           <Row className="g-4 align-items-center justify-content-center">
@@ -185,7 +185,7 @@ const Career = () => {
             ))}
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section className="py-5 bg-light">

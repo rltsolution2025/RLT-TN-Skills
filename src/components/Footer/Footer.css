@@ -1,0 +1,11 @@
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-logo-container img {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+  background-color: white;
+  border-radius: 100%;
+}

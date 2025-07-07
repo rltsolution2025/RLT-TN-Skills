@@ -1,30 +1,31 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaUserGraduate, FaBriefcase, FaChalkboardTeacher } from 'react-icons/fa';
+import './StatsSection.css'; // Import custom styles for the stats section
 
 const StatsSection = () => {
   const statsData = [
     {
       id: 1,
-      icon: <FaUserGraduate size={40} className="text-primary mb-3" />,
+      icon: <FaUserGraduate size={40} className="stats-icon mb-3" />,
       count: "10,000+",
       title: "Students Enrolled"
     },
     {
       id: 2,
-      icon: <FaBriefcase size={40} className="text-primary mb-3" />,
+      icon: <FaBriefcase size={40} className="stats-icon mb-3" />,
       count: "8,500+",
       title: "Students Placed"
     },
     {
       id: 3,
-      icon: <FaChalkboardTeacher size={40} className="text-primary mb-3" />,
-      count: "120+",
+      icon: <FaChalkboardTeacher size={40} className="stats-icon mb-3" />,
+      count: "110+",
       title: "Courses Offered"
     },
     {
       id: 4,
-      icon: <FaUserGraduate size={40} className="text-primary mb-3" />,
+      icon: <FaUserGraduate size={40} className="stats-icon mb-3" />,
       count: "96%",
       title: "Completion Rate"
     }

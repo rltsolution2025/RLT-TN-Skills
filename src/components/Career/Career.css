@@ -1,5 +1,6 @@
 .career-hero {
   padding: 5rem 0;
+  background-color: var(--bs-primary) !important;
 }
 
 .icon-box {

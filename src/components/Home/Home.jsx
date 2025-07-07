@@ -1,23 +1,29 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import StatsSection from '../StatsSection';
 import SuccessStories from '../SuccessStories';
 import Testimonials from '../Testimonials';
 import './Home.css';
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/courses');
+  };
   return (
     <main className="home-page">
       {/* Enhanced Hero Section */}
-      <section className="hero-section bg-primary text-white py-5">
+      <section className="hero-section  text-white py-5">
         <Container>
           <Row className="align-items-center">
             <Col lg={6} className="mb-4 mb-lg-0">
               <h1 className="display-4 fw-bold mb-4">Transform Your Skills, Transform Your Future</h1>
               <p className="lead mb-4">Join 10,000+ learners who've launched tech careers through our industry-aligned programs.</p>
               <div className="d-flex flex-wrap gap-3">
-                <Button variant="light" size="lg" className="rounded-pill px-4">Explore Courses</Button>
-                <Button variant="outline-light" size="lg" className="rounded-pill px-4">Speak to Advisor</Button>
+                <Button variant="light" size="lg" onClick={handleClick} className="rounded-pill px-4">Explore Courses</Button>
+                {/* <Button variant="outline-light" size="lg" className="rounded-pill px-4">Speak to Advisor</Button> */}
               </div>
               <div className="mt-4 d-flex align-items-center">
                 <div className="rating-badge bg-white text-primary rounded-pill px-3 py-1 me-3">
@@ -88,39 +94,41 @@ const Home = () => {
           <Row>
             {[
               {
-                title: "Web Development",
+                title: "Technology",
                 description: "Become a full-stack developer with modern technologies",
-                image: "https://placehold.co/600x400?text=Web+Dev"
+                image: "./assets/Tech.png"
               },
               {
-                title: "Data Science",
+                title: "Agricultre",
                 description: "Master data analysis and machine learning",
-                image: "https://placehold.co/600x400?text=Data+Science"
+                image: "./assets/Agriculture.png"
               },
               {
-                title: "Digital Marketing",
-                description: "Learn SEO, social media, and growth strategies",
-                image: "https://placehold.co/600x400?text=Marketing"
-              },
-              {
-                title: "Cloud Computing",
+                title: "Hotel Management",
                 description: "AWS, Azure and Google Cloud certification courses",
-                image: "https://placehold.co/600x400?text=Cloud+Comp"
+                image: "./assets/Hotel-Management.png"
+              },
+              {
+                title: "Tally and GST",
+                description: "Learn SEO, social media, and growth strategies",
+                image: "./assets/Tally-home.png"
               }
+              
             ].map((category, index) => (
               <Col md={6} lg={3} key={index} className="mb-4">
                 <div className="course-category-card position-relative overflow-hidden rounded-3">
+                   <h5 className="text-naby mb-1 Course-title">{category.title}</h5>
                   <img 
                     src={category.image} 
                     alt={`${category.title} course category`}
                     className="img-fluid w-100"
                   />
                   <div className="category-overlay p-4 d-flex flex-column justify-content-end">
-                    <h5 className="text-white mb-1">{category.title}</h5>
-                    <p className="text-white-50 small mb-2">{category.description}</p>
-                    <Button variant="outline-light" size="sm" className="align-self-start mt-2">
+                   
+                    <p className="text-grey small mb-2">{category.description}</p>
+                    {/* <Button variant="outline-light" size="sm" className="align-self-start mt-2">
                       View Courses
-                    </Button>
+                    </Button> */}
                   </div>
                 </div>
               </Col>
@@ -135,7 +143,7 @@ const Home = () => {
           <Row className="align-items-center">
             <Col lg={6} className="mb-4 mb-lg-0">
               <img 
-                src="https://placehold.co/600x400" 
+                src= "./assets/About-RLT.png" 
                 alt="Modern computer lab with students working on coding projects at SkillDev Academy" 
                 className="img-fluid rounded shadow-sm"
               />
@@ -147,7 +155,7 @@ const Home = () => {
               <div className="academy-highlights mt-4">
                 <div className="d-flex mb-3">
                   <div className="me-4">
-                    <div className="bg-primary text-white rounded-circle p-2">
+                    <div className="About-content text-white rounded-circle p-2">
                       <strong>8+</strong>
                     </div>
                   </div>
@@ -159,7 +167,7 @@ const Home = () => {
                 
                 <div className="d-flex mb-3">
                   <div className="me-4">
-                    <div className="bg-primary text-white rounded-circle p-2">
+                    <div className="About-content text-white rounded-circle p-2">
                       <strong>50+</strong>
                     </div>
                   </div>
@@ -171,7 +179,7 @@ const Home = () => {
                 
                 <div className="d-flex">
                   <div className="me-4">
-                    <div className="bg-primary text-white rounded-circle p-2">
+                    <div className="About-content text-white rounded-circle p-2">
                       <strong>120+</strong>
                     </div>
                   </div>
@@ -192,7 +200,7 @@ const Home = () => {
       <Testimonials />
 
       {/* Call to Action */}
-      <section className="cta-section bg-primary text-white py-5">
+      <section className="cta-section  text-white py-5">
         <Container>
           <Row className="justify-content-center text-center">
             <Col lg={8}>
@@ -201,9 +209,9 @@ const Home = () => {
               <Button variant="light" size="lg" className="rounded-pill px-4 me-3">
                 Apply Now
               </Button>
-              <Button variant="outline-light" size="lg" className="rounded-pill px-4">
+              {/* <Button variant="outline-light" size="lg" className="rounded-pill px-4">
                 Curriculum Guide
-              </Button>
+              </Button> */}
             </Col>
           </Row>
         </Container>

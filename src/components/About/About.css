@@ -1,10 +1,12 @@
 .about-hero {
   padding: 4rem 0;
+  background-color: var(--bs-primary) !important;
 }
 
 .icon-bg {
   display: inline-flex;
   align-items: center;
+  background-color: var(--bs-primary) !important;
   justify-content: center;
 }
 
@@ -25,4 +27,19 @@
   .about-hero img {
     margin-top: 2rem;
   }
+}
+.About-icon{
+  color: var(--bs-primary);
+  margin-bottom: 1rem;
+}
+.rounded-pill{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bs-primary);
+  color: white;
+}
+.rounded-pill:hover{
+  background-color: white;
+  color: var(--bs-primary);
 }

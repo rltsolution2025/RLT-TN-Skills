@@ -32,7 +32,7 @@ const SuccessStories = () => {
   return (
     <section className="success-stories py-5">
       <Container>
-        <h2 className="text-center mb-5">Success Stories</h2>
+        <h2 className="text-center mb-5">Testimonials</h2>
         <Row>
           {successStories.map(story => (
             <Col lg={4} md={6} className="mb-4" key={story.id}>

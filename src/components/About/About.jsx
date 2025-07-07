@@ -16,7 +16,7 @@ const About = () => {
             </Col>
             <Col lg={6}>
               <img 
-                src="https://placehold.co/600x400" 
+                src="./assets/About-skill-dev.png" 
                 alt="Instructor teaching a diverse group of adult students in a modern classroom" 
                 className="img-fluid rounded shadow-lg"
               />
@@ -69,7 +69,7 @@ const About = () => {
           <Row className="align-items-center">
             <Col lg={6} className="mb-4 mb-lg-0">
               <img 
-                src="https://placehold.co/600x400" 
+                src="./assets/About-Skill.png" 
                 alt="Diverse group of professionals collaborating on a project in a modern workspace" 
                 className="img-fluid rounded shadow-sm"
               />
@@ -81,7 +81,7 @@ const About = () => {
               </p>
               <div className="d-flex mb-3">
                 <div className="me-4">
-                  <FaUsers size={32} className="text-primary mb-2" />
+                  <FaUsers size={32} className="About-icon mb-2" />
                 </div>
                 <div>
                   <h4>Industry-Aligned Curriculum</h4>
@@ -90,7 +90,7 @@ const About = () => {
               </div>
               <div className="d-flex mb-3">
                 <div className="me-4">
-                  <FaChalkboardTeacher size={32} className="text-primary mb-2" />
+                  <FaChalkboardTeacher size={32} className="About-icon mb-2" />
                 </div>
                 <div>
                   <h4>Experienced Instructors</h4>
