@@ -7,77 +7,77 @@ const coursesData = [
     id: 1,
     title: "Web Development",
     description: "Master modern web development with HTML, CSS, JavaScript, and popular frameworks.",
-    imageSrc: "https://placehold.co/400x250",
+    imageSrc: "./assets/web-development.png",
     imageAlt: "Web Development Fundamentals course thumbnail showing code on a screen"
   },
   {
     id: 2,
     title: "AI Analyst",
     description: "Learn Python, machine learning, and data visualization techniques for data analysis.",
-    imageSrc: "https://placehold.co/400x250",
+    imageSrc: "./assets/AI-Analyst.png",
     imageAlt: "Data Science Fundamentals course thumbnail showing charts and graphs"
   },
   {
     id: 3,
     title: "Tally and GST",
     description: "Develop skills in SEO, social media marketing, and content strategy for digital success.",
-    imageSrc: "https://placehold.co/400x250",
+    imageSrc: "./assets/Tally.png",
     imageAlt: "Digital Marketing course thumbnail showing social media icons"
   },
   {
     id: 3,
     title: "Food and Beverage Services ",
     description: "Develop skills in SEO, social media marketing, and content strategy for digital success.",
-    imageSrc: "https://placehold.co/400x250",
+    imageSrc: "./assets/Food and Beverage Services.png",
     imageAlt: "Digital Marketing course thumbnail showing social media icons"
   },
   {
     id: 3,
     title: "Bakery & Confectionery ",
     description: "Develop skills in SEO, social media marketing, and content strategy for digital success.",
-    imageSrc: "https://placehold.co/400x250",
+    imageSrc: "./assets/Bakery.png",
     imageAlt: "Digital Marketing course thumbnail showing social media icons"
   },
   {
     id: 3,
     title: "Integrated Fish Farming ",
     description: "Develop skills in SEO, social media marketing, and content strategy for digital success.",
-    imageSrc: "https://placehold.co/400x250",
+    imageSrc: "./assets/Integrated Fish Farming.png",
     imageAlt: "Digital Marketing course thumbnail showing social media icons"
   },
    {
     id: 3,
     title: "Coconut Specialist",
     description: "Develop skills in SEO, social media marketing, and content strategy for digital success.",
-    imageSrc: "https://placehold.co/400x250",
+    imageSrc: "./assets/Coconut Specialist.png",
     imageAlt: "Digital Marketing course thumbnail showing social media icons"
   },
   {
     id: 3,
     title: "Organic Cultivation",
     description: "Develop skills in SEO, social media marketing, and content strategy for digital success.",
-    imageSrc: "https://placehold.co/400x250",
+    imageSrc: "./assets/Organic Cultivation.png",
     imageAlt: "Digital Marketing course thumbnail showing social media icons"
   },
    {
     id: 3,
     title: "Horticulture Supervisor",
     description: "Develop skills in SEO, social media marketing, and content strategy for digital success.",
-    imageSrc: "https://placehold.co/400x250",
+    imageSrc: "./assets/Horticulture Supervisor.png",
     imageAlt: "Digital Marketing course thumbnail showing social media icons"
   },
   {
     id: 3,
     title: "Front Office Executive",
     description: "Develop skills in SEO, social media marketing, and content strategy for digital success.",
-    imageSrc: "https://placehold.co/400x250",
+    imageSrc: "./assets/Front Office Executive.png",
     imageAlt: "Digital Marketing course thumbnail showing social media icons"
   },
   {
     id: 3,
     title: "Housekeeping",
     description: "Develop skills in SEO, social media marketing, and content strategy for digital success.",
-    imageSrc: "https://placehold.co/400x250",
+    imageSrc: "./assets/Housekeeping.png",
     imageAlt: "Digital Marketing course thumbnail showing social media icons"
   }
 

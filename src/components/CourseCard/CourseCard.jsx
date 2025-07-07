@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import './CourseCard.css'; // Import custom styles for the course card
 
 const CourseCard = ({ title, description, imageSrc, imageAlt }) => {
   return (
@@ -8,7 +9,7 @@ const CourseCard = ({ title, description, imageSrc, imageAlt }) => {
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{description}</Card.Text>
-        <Button variant="primary">Learn More</Button>
+        <Button variant="primary" className='Learnmore'>Learn More</Button>
       </Card.Body>
     </Card>
   );
