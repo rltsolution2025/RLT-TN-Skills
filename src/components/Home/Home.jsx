@@ -57,7 +57,7 @@ const Home = () => {
             </Col>
             <Col lg={6} md={12} className="text-center" >
               <img 
-                src="./assets/Skill-development-2.png"
+                src="./assets/course-banner.jpg"
                  alt="Skill Development" 
                 className="img-fluid" 
                 style={{ maxWidth: '100%', height: 'auto' }} 
