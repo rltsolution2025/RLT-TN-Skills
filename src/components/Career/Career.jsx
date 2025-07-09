@@ -1,9 +1,12 @@
 import React from 'react';
-import { Container, Row, Col, Card, Accordion, Tab, Tabs } from 'react-bootstrap';
+import { Container, Row, Col, Card, Accordion } from 'react-bootstrap';
 import { FaBriefcase, FaChartLine, FaUserTie, FaHandshake, FaLaptopCode } from 'react-icons/fa';
+import { useContext } from 'react';
+import { ApplyFormContext } from '../Context/ApplyFormContext';
 import './Career.css';
 
 const Career = () => {
+    const { setShowModal } = useContext(ApplyFormContext);
   const jobOpenings = [
     {
       id: 1,
@@ -11,27 +14,27 @@ const Career = () => {
       company: "RLT Instrumentation Pvt, Ltd.",
       location: "Chengalpattu, TN",
       type: "Internship",
-      description: "Entry-level position for graduates of our Web Development program. HTML, CSS, JavaScript and React skills required.",
+      description: "Gain practical experience as an Instrumentation Engineer through an internship",
       postedDate: "2 days ago"
     },
     {
       id: 2,
       title: "Agriculture Officer",
-      company: "DataInsights Corp",
-      location: "New York, NY",
+      company: "RL Technologies Pvt, Ltd.",
+      location: "Chengalpattu, TN",
       type: "Internship",
-      description: "Ideal for graduates of our Data Science program. Python and SQL skills required.",
+      description: "Learn modern farming, crop management, and agri-policy in this Agriculture Officer course.",
       postedDate: "1 week ago"
     },
-    {
-      id: 3,
-      title: "Digital Marketing Associate",
-      company: "Growth Marketing Partners",
-      location: "Chicago, IL",
-      type: "Remote",
-      description: "Perfect for our Digital Marketing graduates. Experience with SEO and social media management preferred.",
-      postedDate: "3 days ago"
-    }
+    // {
+    //   id: 3,
+    //   title: "Digital Marketing Associate",
+    //   company: "Growth Marketing Partners",
+    //   location: "Chicago, IL",
+    //   type: "Remote",
+    //   description: "Perfect for our Digital Marketing graduates. Experience with SEO and social media management preferred.",
+    //   postedDate: "3 days ago"
+    // }
   ];
 
   const placementStats = [
@@ -144,13 +147,13 @@ const Career = () => {
                         <div className="d-flex flex-wrap mb-2">
                           <span className="me-3 text-muted">{job.company}</span>
                           <span className="me-3 text-muted">{job.location}</span>
-                          <span className="badge bg-primary">{job.type}</span>
+                          <span className="badge">{job.type}</span>
                         </div>
                         <p>{job.description}</p>
                       </Col>
                       <Col md={4} className="text-md-end mt-3 mt-md-0">
                         <span className="d-block text-muted small mb-2">Posted {job.postedDate}</span>
-                        <button className="btn btn-outline-primary">Apply Now</button>
+                        <button onClick={() => setShowModal(true)} className="btn btn-outline apply">Apply Now</button>
                       </Col>
                     </Row>
                   </Card.Body>
@@ -201,7 +204,7 @@ const Career = () => {
                   },
                   {
                     question: "Do you guarantee job placement?",
-                    answer: "While we can't guarantee employment, our proven track record shows 92% of graduates find relevant employment within 6 months of completing their program."
+                    answer: "While we can't guarantee employment, our proven track record shows 92% of graduates find relevant employment after completing their program."
                   },
                   {
                     question: "What salary can I expect after completing a course?",
@@ -209,7 +212,7 @@ const Career = () => {
                   },
                   {
                     question: "How long can I access career services after graduation?",
-                    answer: "All graduates have lifetime access to our career services including job listings, resume reviews, and alumni networking events."
+                    answer: "All graduates have six months of career services including job listings, resume reviews, and alumni networking events."
                   }
                 ].map((item, index) => (
                   <Accordion.Item eventKey={index.toString()} key={index}>

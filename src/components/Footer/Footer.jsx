@@ -2,8 +2,10 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import './Footer.css'; // Import custom styles for the footer
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+ 
   return (
     <footer className="bg-dark text-white py-5">
       <Container>
@@ -28,11 +30,11 @@ const Footer = () => {
           <Col md={4}>
             <h5 className="mb-4">Quick Links</h5>
             <ul className="list-unstyled">
-              <li className="mb-2"><a href="#" className="text-white text-decoration-none">Home</a></li>
-              <li className="mb-2"><a href="#" className="text-white text-decoration-none">Courses</a></li>
-              <li className="mb-2"><a href="#" className="text-white text-decoration-none">About Us</a></li>
-              <li className="mb-2"><a href="#" className="text-white text-decoration-none">Careers</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Contact</a></li>
+              <li className="mb-2"><Link to='/' className="text-white text-decoration-none">Home</Link></li>
+              <li className="mb-2"><Link to='/Courses' className="text-white text-decoration-none">Courses</Link></li>
+              <li className="mb-2"><Link to='/About' className="text-white text-decoration-none">About Us</Link></li>
+              <li className="mb-2"><Link to='/Careers' className="text-white text-decoration-none">Careers</Link></li>
+              <li><Link to='/Contact' className="text-white text-decoration-none">Contact</Link></li>
             </ul>
           </Col>
           <Col md={4}>

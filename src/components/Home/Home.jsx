@@ -1,12 +1,16 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import StatsSection from '../StatsSection';
-import SuccessStories from '../SuccessStories';
-import Testimonials from '../Testimonials';
+import StatsSection from './StatsSection';
+import SuccessStories from './SuccessStories';
+import Testimonials from './Testimonials';
+import { useContext } from 'react';
+import { ApplyFormContext } from '../Context/ApplyFormContext';
 import './Home.css';
 
 const Home = () => {
+
+  const { setShowModal } = useContext(ApplyFormContext);
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -23,7 +27,8 @@ const Home = () => {
               <p className="lead mb-4">Join 10,000+ learners who've launched tech careers through our industry-aligned programs.</p>
               <div className="d-flex flex-wrap gap-3">
                 <Button variant="light" size="lg" onClick={handleClick} className="rounded-pill px-4">Explore Courses</Button>
-                {/* <Button variant="outline-light" size="lg" className="rounded-pill px-4">Speak to Advisor</Button> */}
+                <Button variant="outline-light" size="lg" onClick={() => setShowModal(true)} className="rounded-pill bg-white text-navy px-4">Apply Now</Button>
+                {/* <ApplyButton variant="outline-light" size="lg"  className="rounded-pill bg-white text-navy px-4" /> */}
               </div>
               <div className="mt-4 d-flex align-items-center">
                 <div className="rating-badge bg-white text-primary rounded-pill px-3 py-1 me-3">
@@ -42,13 +47,34 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+      <section className="d-flex text-black py-5">
+        <Container>
+          <Row className="align-items-center">      
+            <Col lg={6} md={12} className="mb-4 mb-lg-0">
+              <h2 className="mb-4" >Empower Your Future with Goverment Certified Skill Training</h2>
+              <p className="lead mb-4">In collaboration with the <strong className='Highlight'>Tamil Nadu Skill Development Corporation (TNSDC)</strong>, RLT Technologies — an official training partner — proudly offers a range of government-supported programs designed to enhance career opportunities and improve employability across high-demand sectors.
+              offering certified training in <strong className='Highlight'> Web Development, Artificial Intelligence (AI) Analyst, Tally & GST, Agriculture & Horticulture, Hotel Management </strong>These programs are designed to equip students with practical knowledge, hands-on experience, and the confidence to build successful careers.</p> 
+            </Col>
+            <Col lg={6} md={12} className="text-center" >
+              <img 
+                src="./assets/Skill-development-2.png"
+                 alt="Skill Development" 
+                className="img-fluid" 
+                style={{ maxWidth: '100%', height: 'auto' }} 
+                />
+               
+            </Col>            
+          </Row>
+        </Container>
+      </section>
+
 
       {/* Why Choose Us Section */}
       <section className="py-5 bg-white">
         <Container>
           <Row className="justify-content-center mb-5">
             <Col lg={8} className="text-center">
-              <h2>Why Choose SkillDev Academy?</h2>
+              <h2>Why Choose RLT Skill Development Academy?</h2>
               <p className="lead">The fastest path from beginner to hired professional</p>
             </Col>
           </Row>
@@ -205,8 +231,9 @@ const Home = () => {
           <Row className="justify-content-center text-center">
             <Col lg={8}>
               <h2 className="mb-4">Ready to Start Your Tech Journey?</h2>
+              
               <p className="lead mb-4">Speak with an admissions advisor today about which program is right for you.</p>
-              <Button variant="light" size="lg" className="rounded-pill px-4 me-3">
+              <Button  onClick={() => setShowModal(true)} variant="light" size="lg" className="rounded-pill px-4 d-block mx-auto" >
                 Apply Now
               </Button>
               {/* <Button variant="outline-light" size="lg" className="rounded-pill px-4">

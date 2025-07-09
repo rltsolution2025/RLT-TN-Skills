@@ -78,3 +78,10 @@
   border-radius: 50%;
   font-size: 1.2rem;
 }
+.text-navy {
+  color: navy !important;
+}
+.Highlight {
+  color: #044db9; /* Highlight color */
+  font-weight: bold;
+}

@@ -1,0 +1,11 @@
+.custom-hover {
+  color: white; /* Bootstrap primary color */
+  background-color: var(--bs-primary) ; /* Bootstrap primary background */
+  border: 1px solid var(--bs-primary) ;
+}
+
+.custom-hover:hover {
+  color: var(--bs-primary) ; /* Keep text primary on hover */
+  background-color: #e6f0ff; /* Optional: slightly different background */
+   border: 1px solid var(--bs-primary) ;
+}

@@ -2,8 +2,14 @@ import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { FaBullseye, FaLightbulb, FaUsers, FaChalkboardTeacher } from 'react-icons/fa';
 import './About.css';
-
+import { useNavigate } from 'react-router-dom';
 const About = () => {
+ const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/courses');
+  };
+
   return (
     <div className="about-page">
       {/* Hero Section */}
@@ -97,7 +103,7 @@ const About = () => {
                   <p>Learn from professionals with 10+ years of industry experience and teaching expertise.</p>
                 </div>
               </div>
-              <Button variant="outline-primary" size="lg" className="rounded-pill px-4">
+              <Button onClick={handleClick} variant="outline-primary" size="lg" className="rounded-pill px-4">
                 Explore Our Courses
               </Button>
             </Col>

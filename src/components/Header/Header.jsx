@@ -16,7 +16,7 @@ const Header = () => {
             className="d-inline-block align-top"
             
           />
-          <span style={{width:'150px', textAlign:'center'}}>RL Technologies</span>
+          <span style={{width:'150px', textAlign:'center'}}>RLT Skill Development Academy</span>
           </div> 
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
