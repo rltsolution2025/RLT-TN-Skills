@@ -4,26 +4,26 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 const successStories = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "Software Developer at Google",
-    quote: "The web development course transformed my career. Within 3 months of completion, I landed my dream job at Google.",
-    image: "https://placehold.co/200",
+    name: "Flora",
+    role: "Web Developer",
+    quote: "The web development course transformed my career. Within 3 months of completion, I landed my dream job.",
+    image: "./assets/girl-profile.png",
     alt: "Sarah Johnson smiling headshot - Young female professional with curly brown hair"
   },
   {
     id: 2,
-    name: "Michael Rodriguez",
-    role: "Data Scientist at Amazon",
-    quote: "The practical projects in the data science program gave me the confidence to ace my technical interviews.",
-    image: "https://placehold.co/200",
+    name: "Nagaraj",
+    role: "AI Analyst",
+    quote: "The practical projects in the Artificial Intelligence program gave me the confidence to ace my technical interviews.",
+    image: "./assets/boy-profile.png",
     alt: "Michael Rodriguez headshot - Hispanic male with glasses smiling professionally"
   },
   {
     id: 3,
-    name: "Priya Patel",
-    role: "Digital Marketing Manager",
-    quote: "After completing the digital marketing specialization, I doubled my client base within six months.",
-    image: "https://placehold.co/200",
+    name: "Priyanka",
+    role: "Front Office Executive",
+    quote: "After completing the front office executive program, I doubled my communication and client handling skills.",
+    image: "./assets/girl-profile.png",
     alt: "Priya Patel headshot - South Asian woman in professional attire smiling confidently"
   }
 ];

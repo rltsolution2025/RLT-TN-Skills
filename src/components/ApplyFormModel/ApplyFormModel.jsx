@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { ApplyFormContext } from '../Context/ApplyFormContext';
+import {postApplyForm} from '../Services/Api'; // Import the API function
+
 
 const ApplyFormModal = () => {
   const { showModal, setShowModal } = useContext(ApplyFormContext);
@@ -29,34 +31,41 @@ const ApplyFormModal = () => {
       resume: e.target.files[0],
     }));
   };
-
-  const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Save data to localStorage
-    const applications = JSON.parse(localStorage.getItem('applications') || '[]');
-    applications.push(formData);
-    localStorage.setItem('applications', JSON.stringify(applications));
-    console.log('Application submitted:', formData);
-
-    // Show thank you message
-    setFormSubmitted(true);
-
-    // Reset form after a delay
-    setTimeout(() => {
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        programType: '',
-        course: '',
-        internship: '',
-        resume: null,
-      });
-      setFormSubmitted(false);
-      setShowModal(false);
-    }, 3000);
-  };
+    const data = new FormData();
+    data.append('fullName', formData.fullName);
+    data.append('email', formData.email);
+    data.append('phone', formData.phone);
+    data.append('programType', formData.programType);
+    if (formData.programType === 'course') data.append('course', formData.course);
+    if (formData.programType === 'internship') data.append('internship', formData.internship);
+    data.append('resume', formData.resume);  
+  
+  try {
+      await postApplyForm(formData);
+      console.log('Enquiry posted to backend:', formData);
+      setFormSubmitted(true);
+      const applications = JSON.parse(localStorage.getItem('applications') || '[]');
+      applications.push(formData);
+      localStorage.setItem('applications', JSON.stringify(applications));
+      setTimeout(() => {
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          programType: '',
+          course: '',
+          internship: '',
+          resume: null,
+        });
+        setFormSubmitted(false);
+        setShowModal(false);
+      }, 3000);
+    } catch (error) {
+      console.error('Submission failed:', error);
+    }
+  }
 
   return (
     <Modal show={showModal} onHide={() => setShowModal(false)} size="lg">

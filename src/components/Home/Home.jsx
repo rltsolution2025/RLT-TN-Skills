@@ -194,12 +194,12 @@ const Home = () => {
                 <div className="d-flex mb-3">
                   <div className="me-4">
                     <div className="About-content text-white rounded-circle p-2">
-                      <strong>50+</strong>
+                      <strong>15+</strong>
                     </div>
                   </div>
                   <div>
                     <h5>Expert Instructors</h5>
-                    <p className="text-muted mb-0">From companies like Google, Amazon, and Microsoft</p>
+                    <p className="text-muted mb-0">From top-tier companies</p>
                   </div>
                 </div>
                 
@@ -223,7 +223,7 @@ const Home = () => {
       {/* Original Sections (Stats, Success Stories, Testimonials) */}
       <StatsSection />
       <SuccessStories />
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       {/* Call to Action */}
       <section className="cta-section  text-white py-5">

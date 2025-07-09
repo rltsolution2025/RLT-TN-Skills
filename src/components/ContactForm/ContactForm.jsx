@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 import './ContactForm.css'; // Import custom styles for the contact form
+import {postContactForm} from '../Services/Api'; // Import the API function
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -21,14 +22,18 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    // Send form data to backend
+    await postContactForm(formData);
+    console.log('Enquiry posted to backend:', formData);
 
     // Save data to localStorage
     const enquiries = JSON.parse(localStorage.getItem('enquiries') || '[]');
     enquiries.push(formData);
     localStorage.setItem('enquiries', JSON.stringify(enquiries));
-    console.log('Enquiry submitted:', formData);
 
     // Set submitted state to true
     setSubmitted(true);
@@ -41,10 +46,11 @@ const ContactForm = () => {
       mobile: '',
       message: '',
     });
-
-    // Optionally, show a success message or alert
-    // alert('Your enquiry has been submitted successfully!');
-  };
+  } catch (error) {
+    console.error('Error submitting contact form:', error);
+    alert('There was an error submitting your enquiry. Please try again.');
+  }
+};
 
   return (
     <section className="py-5">

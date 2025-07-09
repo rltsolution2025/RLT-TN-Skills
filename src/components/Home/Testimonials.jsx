@@ -5,9 +5,9 @@ const successStories = [
   {
     id: 1,
     name: "Sarah Johnson",
-    role: "Software Developer at Google",
+    role: "Front Office Executive",
     quote: "The web development course transformed my career. Within 3 months of completion, I landed my dream job at Google.",
-    image: "https://placehold.co/200",
+    image: "./assets/girl-profile.png",
     alt: "Sarah Johnson smiling headshot - Young female professional with curly brown hair"
   },
   {
@@ -15,7 +15,7 @@ const successStories = [
     name: "Michael Rodriguez",
     role: "Data Scientist at Amazon",
     quote: "The practical projects in the data science program gave me the confidence to ace my technical interviews.",
-    image: "https://placehold.co/200",
+    image: "./assets/boy-profile.png",
     alt: "Michael Rodriguez headshot - Hispanic male with glasses smiling professionally"
   },
   {
@@ -23,7 +23,7 @@ const successStories = [
     name: "Priya Patel",
     role: "Digital Marketing Manager",
     quote: "After completing the digital marketing specialization, I doubled my client base within six months.",
-    image: "https://placehold.co/200",
+    image: "./assets/boy-profile.png",
     alt: "Priya Patel headshot - South Asian woman in professional attire smiling confidently"
   }
 ];
