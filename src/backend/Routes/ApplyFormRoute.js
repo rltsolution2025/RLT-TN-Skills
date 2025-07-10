@@ -19,7 +19,7 @@ const ApplyFormModel = require('../Models/ApplyFormModel');
 router.post('/apply', async (req, res) => {
     try {
         const { fullName, email, phone, course,internship, programType } = req.body;
-        const resume = req.file ? req.file.path : null;
+    
     
         // Create a new application
         const newApplication = new ApplyFormModel({
@@ -29,7 +29,7 @@ router.post('/apply', async (req, res) => {
         course,
         internship,
         programType,
-        resume
+        createdAt: new Date() // Add createdAt field with current date
         });
     
         // Save the application to the database
