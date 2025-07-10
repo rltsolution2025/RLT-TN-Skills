@@ -16,7 +16,7 @@ const ApplyFormModel = require('../Models/ApplyFormModel');
 //   })
 // });
 // POST route to handle form submission
-router.post('/apply', upload.single('resume'), async (req, res) => {
+router.post('/apply', async (req, res) => {
     try {
         const { fullName, email, phone, course,internship, programType } = req.body;
         const resume = req.file ? req.file.path : null;

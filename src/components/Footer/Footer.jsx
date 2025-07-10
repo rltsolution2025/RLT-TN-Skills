@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="mb-4">
               <div className='footer-logo-container'>
               <img src='./assets/RLT-Logo.png' alt="SkillDev Academy logo - Company branding in white on dark background" className="mb-3" />
-              <span >RLT Skill Development Academy</span>
+              <span >RLT SkillDev Academy</span>
               </div>
               <p className="mb-4">
                 Empowering individuals with practical skills for the modern workforce.
@@ -57,7 +57,7 @@ const Footer = () => {
         </Row>
         <hr className="my-4" />
         <div className="text-center">
-          <p className="mb-0">&copy; {new Date().getFullYear()} RLT Skill Development Academy. All rights reserved.</p>
+          <p className="mb-0">&copy; {new Date().getFullYear()} RLT SkillDev Academy. All rights reserved.</p>
         </div>
       </Container>
     </footer>
