@@ -16,7 +16,7 @@ const upload = multer({
   })
 });
 // POST route to handle form submission
-router.post('/', upload.single('resume'), async (req, res) => {
+router.post('/apply', upload.single('resume'), async (req, res) => {
     try {
         const { fullName, email, phone, course,internship, programType } = req.body;
         const resume = req.file ? req.file.path : null;
@@ -42,7 +42,7 @@ router.post('/', upload.single('resume'), async (req, res) => {
     }
     }); 
 // GET route to fetch all applications
-router.get('/', async (req, res) => {
+router.get('/apply', async (req, res) => {
     try {
         const applications = await ApplyFormModel.find();
         console.log('Fetched applications:', applications); // Log the fetched applications

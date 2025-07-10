@@ -3,7 +3,7 @@ const ContactFormModel = require('../Models/ContactFormModel');
 const router = express.Router();    
 
 // POST route to handle contact form submission
-router.post('/', async (req, res) => {  
+router.post('/contact', async (req, res) => {  
     try {
         const { firstName, lastName, email, mobile, message } = req.body;
 
@@ -35,7 +35,7 @@ router.post('/', async (req, res) => {
 });
 
 // GET route to fetch all contact form entries
-router.get('/', async (req, res) => {   
+router.get('/contact', async (req, res) => {   
     try {
         const contactForms = await ContactFormModel.find();
         res.status(200).json(contactForms);

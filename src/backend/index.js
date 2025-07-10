@@ -20,8 +20,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Static file serving
 app.use(express.static(path.join(__dirname, 'public')));    
 // Routes
-app.use('/api/apply', applyFormRoutes);
-app.use('/api/contact', contactFormRoutes); 
+app.use('/api', applyFormRoutes);
+app.use('/api', contactFormRoutes); 
 // Serve React frontend in production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
