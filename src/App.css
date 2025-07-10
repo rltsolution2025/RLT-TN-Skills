@@ -10,12 +10,8 @@
 .btn-primary {
   background-color: var(--bs-primary) !important;
   border-color: var(--bs-primary) !important;
+  color: white !important; /* Ensure text color is white */
 }
-
-.btn-primary:hover {
-  background-color: darken(var(--bs-primary), 10%) !important; /* Adjust hover color */
-}
-
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -45,6 +41,7 @@ body {
 
 .navbar-nav .nav-link {
   font-weight: 500;
+  color: white !important;
   position: relative;
 }
 

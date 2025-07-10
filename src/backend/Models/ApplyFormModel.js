@@ -7,7 +7,7 @@ const applyFormSchema = new mongoose.Schema({
   programType: { type: String, required: true },
   course: { type: String, required: false },
   internship: { type: String, required: false },
-  resume: { type: String, required: false },
+  // resume: { type: String, required: false },
   createdAt: { type: Date, default: Date.now }
 });
 

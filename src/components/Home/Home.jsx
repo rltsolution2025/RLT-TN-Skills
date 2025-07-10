@@ -3,7 +3,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import StatsSection from './StatsSection';
 import SuccessStories from './SuccessStories';
-import Testimonials from './Testimonials';
+// import Testimonials from './Testimonials';
 import { useContext } from 'react';
 import { ApplyFormContext } from '../Context/ApplyFormContext';
 import './Home.css';

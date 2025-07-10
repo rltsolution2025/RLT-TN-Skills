@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { ApplyFormContext } from '../Context/ApplyFormContext';
 import {postApplyForm} from '../Services/Api'; // Import the API function
+import './ApplyFormModel.css'; // Import custom styles for the apply form modal
 
 
 const ApplyFormModal = () => {
@@ -40,7 +41,7 @@ const ApplyFormModal = () => {
     data.append('programType', formData.programType);
     if (formData.programType === 'course') data.append('course', formData.course);
     if (formData.programType === 'internship') data.append('internship', formData.internship);
-    data.append('resume', formData.resume);  
+    // data.append('resume', formData.resume);  
   
   try {
       await postApplyForm(formData);
@@ -57,7 +58,7 @@ const ApplyFormModal = () => {
           programType: '',
           course: '',
           internship: '',
-          resume: null,
+          // resume: null,
         });
         setFormSubmitted(false);
         setShowModal(false);
@@ -171,7 +172,7 @@ const ApplyFormModal = () => {
               </Form.Group>
             )}
 
-            <Form.Group className="mb-3" controlId="resume">
+            {/* <Form.Group className="mb-3" controlId="resume">
               <Form.Label>Upload Resume</Form.Label>
               <Form.Control
                 type="file"
@@ -180,7 +181,7 @@ const ApplyFormModal = () => {
                 accept=".pdf,.doc,.docx"
                 required
               />
-            </Form.Group>
+            </Form.Group> */}
 
             <Button variant="primary" type="submit" className="w-100">
               Submit 

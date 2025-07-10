@@ -1,20 +1,20 @@
 const express = require('express');
 const router = express.Router();
 const ApplyFormModel = require('../Models/ApplyFormModel');
-const multer = require('multer');
-const path = require('path');
+// const multer = require('multer');
+// const path = require('path');
 
 
-const upload = multer({
-  storage: multer.diskStorage({
-    destination: (req, file, cb) => {
-      cb(null, 'uploads/');
-    },
-    filename: (req, file, cb) => {
-      cb(null, Date.now() + path.extname(file.originalname));
-    }
-  })
-});
+// const upload = multer({
+//   storage: multer.diskStorage({
+//     destination: (req, file, cb) => {
+//       cb(null, 'uploads/');
+//     },
+//     filename: (req, file, cb) => {
+//       cb(null, Date.now() + path.extname(file.originalname));
+//     }
+//   })
+// });
 // POST route to handle form submission
 router.post('/apply', upload.single('resume'), async (req, res) => {
     try {
