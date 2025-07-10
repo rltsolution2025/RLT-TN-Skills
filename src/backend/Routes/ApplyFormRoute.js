@@ -19,8 +19,6 @@ const ApplyFormModel = require('../Models/ApplyFormModel');
 router.post('/apply', async (req, res) => {
     try {
         const { fullName, email, phone, course,internship, programType } = req.body;
-    
-    
         // Create a new application
         const newApplication = new ApplyFormModel({
         fullName,

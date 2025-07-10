@@ -6,11 +6,7 @@ const API = axios.create({
 
 //APIs
 export const postContactForm = (formData) => API.post('/contact', formData);
-export const postApplyForm = (formData) => API.post('/apply', formData, {
-  headers: {
-    'Content-Type': 'multipart/form-data',
-  },
-});
+export const postApplyForm = (formData) => API.post('/apply', formData);
 export const getContactForms = () => API.get('/contact');
 export const getApplyForms = () => API.get('/apply');
 export const getEnquiries = () => {

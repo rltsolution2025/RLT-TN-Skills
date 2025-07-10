@@ -14,7 +14,6 @@ const ApplyFormModal = () => {
     programType: '', // Changed from position to programType
     course: '', // Added for course selection
     internship: '', // Added for internship selection
-    resume: null,
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
 
