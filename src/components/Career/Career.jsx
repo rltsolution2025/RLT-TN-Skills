@@ -137,7 +137,7 @@ const Career = () => {
             {/* Job Openings */}
             <section className="py-5 bg-light" ref={jobOpeningsRef}> {/* Attach ref here */}
                 <Container>
-                    <h2 className="text-center mb-5">Current Job Openings</h2>
+                    <h2 className="text-center mb-5">Current Openings</h2>
                     <Row>
                         <Col lg={8} className="mx-auto">
                             {jobOpenings.map(job => (

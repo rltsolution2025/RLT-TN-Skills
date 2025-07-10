@@ -56,12 +56,15 @@ const Home = () => {
               offering certified training in <strong className='Highlight'> Web Development, Artificial Intelligence (AI) Analyst, Tally & GST, Agriculture & Horticulture, Hotel Management </strong>These programs are designed to equip students with practical knowledge, hands-on experience, and the confidence to build successful careers.</p> 
             </Col>
             <Col lg={6} md={12} className="text-center" >
-              <img 
+              {/* <img 
                 src="./assets/course-banner.jpg"
                  alt="Skill Development" 
                 className="img-fluid" 
                 style={{ maxWidth: '100%', height: 'auto' }} 
-                />
+                /> */}
+                 <video width="100%" style={{ maxWidth: '100%', borderRadius: '12px' }} controls autoPlay muted loop>
+                   <source src= './assets/RLT.mp4' type="video/mp4" />
+                </video>
                
             </Col>            
           </Row>
@@ -126,17 +129,17 @@ const Home = () => {
               },
               {
                 title: "Agricultre",
-                description: "Master data analysis and machine learning",
+                description: "introduces students to modern farming techniques",
                 image: "./assets/Agriculture.png"
               },
               {
                 title: "Hotel Management",
-                description: "AWS, Azure and Google Cloud certification courses",
+                description: "Introduces students to modern hospitality practices and industry standards.",
                 image: "./assets/Hotel-Management.png"
               },
               {
                 title: "Tally and GST",
-                description: "Learn SEO, social media, and growth strategies",
+                description: "Introduces students to modern accounting practices for efficient business",
                 image: "./assets/Tally-home.png"
               }
               

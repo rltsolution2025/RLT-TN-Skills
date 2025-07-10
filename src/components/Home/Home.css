@@ -85,3 +85,7 @@
   color: #044db9; /* Highlight color */
   font-weight: bold;
 }
+.img-fluid{
+  max-width: 100%;
+  height: 50vh;
+}
